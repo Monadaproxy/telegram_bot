@@ -1,4 +1,4 @@
-# *STelegram Bot Project*
+# *Telegram Bot Project*
 
 ****Бот, интегрированный с Anilist API. Достаёт информацию об аниме-новинках и самых популярных тайтлах****
 
@@ -10,13 +10,18 @@
     git clone https://github.com/Monadaproxy/telegram_bot.git
     cd telegram_bot
 ```
+2. Установите зависимости:
 
-2. Запустите сервис:
+```shell
+    pip install aiogram aiohttp asyncio
+```
+
+3. Запустите сервис:
 ```shell
     python main.py
 ```
 
-3. Найдите бота в телеграм: `@animeparse_bot`
+4. Найдите бота в телеграм: `@animeparse_bot`
 
 ## Стек технологий
 
