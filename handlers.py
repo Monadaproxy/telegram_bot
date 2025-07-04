@@ -84,7 +84,6 @@ async def random_anime(callback: types.CallbackQuery):
 @router.callback_query(F.data.in_(["top_anime", "new_episodes"]))
 async def handle_other_buttons(callback: types.CallbackQuery):
     try:
-        # Удаляем предыдущее сообщение (любое - с фото или текстом)
         await callback.message.delete()
 
         if callback.data == "top_anime":
@@ -92,7 +91,6 @@ async def handle_other_buttons(callback: types.CallbackQuery):
         else:
             text = await get_new_episodes()
 
-        # Отправляем новое сообщение
         await callback.message.answer(
             text=text,
             reply_markup=get_inline_keyboard(),
